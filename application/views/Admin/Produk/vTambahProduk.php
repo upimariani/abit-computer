@@ -56,6 +56,7 @@
 						<option value="pcs">pcs</option>
 						<option value="pack">pack</option>
 						<option value="satuan">satuan</option>
+						<option value="unit">unit</option>
 
 					</select>
 					<?= form_error('keterangan', '<span class="text-xs text-red-600 dark:text-gray-400">', '</span>') ?>

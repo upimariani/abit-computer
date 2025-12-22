@@ -64,6 +64,9 @@
 						<option value="satuan" <?php if ($produk->keterangan == 'satuan') {
 													echo 'selected';
 												} ?>>satuan</option>
+						<option value="unit" <?php if ($produk->keterangan == 'unit') {
+													echo 'selected';
+												} ?>>unit</option>
 
 					</select>
 					<?= form_error('keterangan', '<span class="text-xs text-red-600 dark:text-gray-400">', '</span>') ?>

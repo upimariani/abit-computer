@@ -62,7 +62,6 @@ class cProduk extends CI_Controller
 				$upload_data = $this->upload->data();
 				$data = array(
 					'id_kategori' => $this->input->post('kategori'),
-					'id_pengguna' => '1',
 					'merk' => $this->input->post('merk'),
 					'deskripsi' => $this->input->post('deskripsi'),
 					'keterangan' => $this->input->post('keterangan'),
@@ -109,7 +108,6 @@ class cProduk extends CI_Controller
 				$upload_data =  $this->upload->data();
 				$data = array(
 					'id_kategori' => $this->input->post('kategori'),
-					'id_pengguna' => '1',
 					'merk' => $this->input->post('merk'),
 					'deskripsi' => $this->input->post('deskripsi'),
 					'keterangan' => $this->input->post('keterangan'),
@@ -123,7 +121,6 @@ class cProduk extends CI_Controller
 			} //tanpa ganti gambar
 			$data = array(
 				'id_kategori' => $this->input->post('kategori'),
-				'id_pengguna' => '1',
 				'merk' => $this->input->post('merk'),
 				'deskripsi' => $this->input->post('deskripsi'),
 				'keterangan' => $this->input->post('keterangan'),
