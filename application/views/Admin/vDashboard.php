@@ -1,7 +1,16 @@
 <main class="h-full overflow-y-auto">
 	<div class="container px-6 py-6 mx-auto grid">
 		<h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-			Dashboard Admin
+			<?php
+			if ($this->session->userdata('id') == '1') {
+				$user = 'Admin';
+			} else if ($this->session->userdata('id') == '2') {
+				$user = 'Staff Manajer';
+			} else {
+				$user = 'Manajer';
+			}
+			?>
+			Dashboard <?= $user ?>
 		</h2>
 		<?php
 		$pelanggan = $this->db->query("SELECT COUNT(id_pelanggan) as pelanggan FROM `pelanggan`")->row();

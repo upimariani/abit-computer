@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2025 at 02:09 PM
+-- Generation Time: Feb 08, 2026 at 10:45 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -280,7 +280,11 @@ INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `id_komputer`, `qty
 (238, 238, 3, 2),
 (239, 239, 13, 3),
 (240, 240, 17, 3),
-(241, 241, 10, 2);
+(241, 241, 10, 2),
+(242, 242, 1, 2),
+(243, 242, 7, 1),
+(244, 243, 3, 1),
+(245, 245, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -322,13 +326,13 @@ CREATE TABLE `komputer` (
 --
 
 INSERT INTO `komputer` (`id_komputer`, `id_kategori`, `merk`, `deskripsi`, `keterangan`, `harga`, `foto`, `stok`) VALUES
-(1, 1, 'PRINTER EPSON L121 INK JET', 'deskripsi printer epson l121 ink jet', 'unit', 1800000, 'images1.png', 50),
+(1, 1, 'PRINTER EPSON L121 INK JET', 'deskripsi printer epson l121 ink jet', 'unit', 1800000, 'images1.png', 48),
 (2, 1, 'OLIKE QUICK CHANGER POWER ADAPTER C307 WHITE', 'deskripsi olike quick changer power adapter c307 white', 'unit', 50000, 'images1.png', 50),
-(3, 1, 'OLIKE WIRED EARPHONE E201 WHITE', 'deskripsi olike wired earphone e201 white', 'unit', 24000, 'images1.png', 50),
-(4, 1, 'LAPTOP ASUS VIVOBOOK GO 14 E1404GA I3 N305 8CORE BLK -FHD321', 'deskripsi laptop asus vivobook go 14 e1404ga i3 n305 8core blk -fhd321', 'unit', 6850000, 'images1.png', 50),
+(3, 1, 'OLIKE WIRED EARPHONE E201 WHITE', 'deskripsi olike wired earphone e201 white', 'unit', 24000, 'images1.png', 49),
+(4, 1, 'LAPTOP ASUS VIVOBOOK GO 14 E1404GA I3 N305 8CORE BLK -FHD321', 'deskripsi laptop asus vivobook go 14 e1404ga i3 n305 8core blk -fhd321', 'unit', 6850000, 'images1.png', 49),
 (5, 1, 'OLIKE WIRELESS OPTICAL MOUSE M200 BLACK', 'deskripsi olike wireless optical mouse m200 black', 'unit', 49000, 'images1.png', 50),
 (6, 1, 'OLIKE WIRED EARPHONE E13 GREEN', 'deskripsi olike wired earphone e13 green', 'unit', 30000, 'images1.png', 50),
-(7, 1, 'MIKUSO GAMEPAD DOUBLE GP-USB008', 'deskripsi mikuso gamepad double gp-usb008', 'unit', 152000, 'images1.png', 50),
+(7, 1, 'MIKUSO GAMEPAD DOUBLE GP-USB008', 'deskripsi mikuso gamepad double gp-usb008', 'unit', 152000, 'images1.png', 49),
 (8, 1, 'MOUSE MIKUSO USB WIRED CONNECTION MOS-372U', 'deskripsi mouse mikuso usb wired connection mos-372u', 'unit', 38000, 'images1.png', 50),
 (9, 1, 'MIKUSO MOUSEPAD MP-118', 'deskripsi mikuso mousepad mp-118', 'unit', 11000, 'images1.png', 50),
 (10, 1, 'KEYBOARD PROTECTOR 14 INCH', 'deskripsi keyboard protector 14 inch', 'unit', 6000, 'images1.png', 50),
@@ -379,68 +383,69 @@ CREATE TABLE `pelanggan` (
   `level_member` int(11) NOT NULL,
   `recency` int(11) NOT NULL,
   `frequency` int(11) NOT NULL,
-  `monetary` int(11) NOT NULL
+  `monetary` int(11) NOT NULL,
+  `otp` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `alamat`, `no_hp`, `jk`, `username`, `password`, `level_member`, `recency`, `frequency`, `monetary`) VALUES
-(1, 'A ABIL', 'Kuningan', '089066787654', 'Laki-Laki', 'a_abil', 'a_abil', 1, 89, 5, 988000),
-(2, 'A DENDI', 'Kuningan', '089066787654', 'Laki-Laki', 'a_dendi', 'a_dendi', 2, 93, 9, 10738000),
-(3, 'A HENDRA', 'Kuningan', '089066787654', 'Laki-Laki', 'a_hendra', 'a_hendra', 3, 128, 1, 112000),
-(4, 'A YANTO', 'Kuningan', '089066787654', 'Laki-Laki', 'a_yanto', 'a_yanto', 4, 97, 5, 3907000),
-(5, 'ACE', 'Kuningan', '089066787654', 'Laki-Laki', 'ace', 'ace', 4, 89, 7, 7309000),
-(6, 'AGUS', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'agus', 1, 96, 3, 596000),
-(7, 'ANDRI', 'Kuningan', '089066787654', 'Laki-Laki', 'andri', 'andri', 3, 132, 5, 416000),
-(8, 'ARIF', 'Kuningan', '089066787654', 'Laki-Laki', 'arif', 'arif', 1, 103, 8, 1129000),
-(9, 'ASEP', 'Kuningan', '089066787654', 'Laki-Laki', 'asep', 'asep', 2, 133, 3, 8127000),
-(10, 'BAHRIAN', 'Kuningan', '089066787654', 'Laki-Laki', 'bahrian', 'bahrian', 1, 144, 4, 654000),
-(11, 'BAI SABARUDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'bai_sabarudin', 'bai_sabarudin', 3, 133, 3, 264000),
-(12, 'BAPAK ALI', 'Kuningan', '089066787654', 'Laki-Laki', 'bapak_ali', 'bapak_ali', 1, 96, 10, 1309000),
-(13, 'BP ARIFIN', 'Kuningan', '089066787654', 'Laki-Laki', 'bp_arifin', 'bp_arifin', 3, 97, 1, 6000),
-(14, 'BP ENDA', 'Kuningan', '089066787654', 'Laki-Laki', 'bp_enda', 'bp_enda', 3, 121, 4, 427000),
-(15, 'BU ELI', 'Kuningan', '089066787654', 'Perempuan', 'bu_eli', 'bu_eli', 1, 94, 6, 1307000),
-(16, 'BU IMAS', 'Kuningan', '089066787654', 'Perempuan', 'bu_imas', 'bu_imas', 2, 131, 2, 10064000),
-(17, 'BU MANTRI ITIT', 'Kuningan', '089066787654', 'Perempuan', 'bu_mantri_itit', 'bu_mantri_itit', 3, 99, 3, 216000),
-(18, 'CHELSEA', 'Kuningan', '089066787654', 'Perempuan', 'chelsea', 'chelsea', 3, 128, 4, 446000),
-(19, 'CINTA', 'Kuningan', '089066787654', 'Perempuan', 'cinta', 'cinta', 3, 130, 3, 280000),
-(20, 'DANI', 'Kuningan', '089066787654', 'Perempuan', 'dani', 'dani', 1, 88, 7, 636000),
-(21, 'DINDA', 'Kuningan', '089066787654', 'Perempuan', 'dinda', 'dinda', 3, 93, 5, 514000),
-(22, 'EFRIAN', 'Kuningan', '089066787654', 'Laki-Laki', 'efrian', 'efrian', 2, 132, 6, 17486000),
-(23, 'EGA', 'Kuningan', '089066787654', 'Laki-Laki', 'ega', 'ega', 3, 144, 4, 526000),
-(24, 'ERIS', 'Kuningan', '089066787654', 'Laki-Laki', 'eris', 'eris', 1, 96, 4, 570000),
-(25, 'FARHAN', 'Kuningan', '089066787654', 'Laki-Laki', 'farhan', 'farhan', 1, 92, 3, 1038000),
-(26, 'HERU', 'Kuningan', '089066787654', 'Laki-Laki', 'heru', 'heru', 1, 102, 5, 1142000),
-(27, 'IBU FRAHMI', 'Kuningan', '089066787654', 'Perempuan', 'ibu_frahmi', 'ibu_frahmi', 1, 105, 3, 578000),
-(28, 'IBU IIS', 'Kuningan', '089066787654', 'Perempuan', 'ibu_iis', 'ibu_iis', 3, 121, 3, 63000),
-(29, 'IBU SUCIHARTI', 'Kuningan', '089066787654', 'Perempuan', 'ibu_suciharti', 'ibu_suciharti', 3, 129, 7, 508000),
-(30, 'KANG UDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'kang_udin', 'kang_udin', 1, 87, 4, 684000),
-(31, 'KHARISMA ', 'Kuningan', '089066787654', 'Perempuan', 'kharisma_', 'kharisma_', 2, 93, 7, 10836000),
-(32, 'M REZA', 'Kuningan', '089066787654', 'Laki-Laki', 'm_reza', 'm_reza', 3, 92, 5, 548000),
-(33, 'MAE INDRIYANI', 'Kuningan', '089066787654', 'Perempuan', 'mae_indriyani', 'mae_indriyani', 1, 94, 5, 1163000),
-(34, 'MAMAH AYU', 'Kuningan', '089066787654', 'Perempuan', 'mamah_ayu', 'mamah_ayu', 2, 103, 5, 10445000),
-(35, 'NIKA', 'Kuningan', '089066787654', 'Perempuan', 'nika', 'nika', 1, 107, 5, 662000),
-(36, 'OMAR SONJAYA', 'Kuningan', '089066787654', 'Laki-Laki', 'omar_sonjaya', 'omar_sonjaya', 1, 157, 2, 1860000),
-(37, 'P IPIN', 'Kuningan', '089066787654', 'Perempuan', 'p_ipin', 'p_ipin', 3, 98, 2, 401000),
-(38, 'PAK ANDRI', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_andri', 'pak_andri', 2, 95, 8, 7793000),
-(39, 'PAK APANG', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_apang', 'pak_apang', 4, 123, 3, 5142000),
-(40, 'PAK ASEP', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_asep', 'pak_asep', 3, 125, 4, 314000),
-(41, 'PAK BIHI EDI', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_bihi_edi', 'pak_bihi_edi', 1, 106, 3, 795000),
-(42, 'PAK DANI', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_dani', 'pak_dani', 3, 124, 2, 177000),
-(43, 'PAK HAJI IIP', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_haji_iip', 'pak_haji_iip', 4, 91, 3, 5118000),
-(44, 'PAK IMAM', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_imam', 'pak_imam', 3, 89, 5, 485000),
-(45, 'PAK KARMAD', 'Kuningan', '089066787654', 'Laki-Laki', 'pak_karmad', 'pak_karmad', 3, 111, 4, 331000),
-(46, 'RAI ALVIN', 'Kuningan', '089066787654', 'Laki-Laki', 'rai_alvin', 'rai_alvin', 3, 91, 6, 405000),
-(47, 'REZA', 'Kuningan', '089066787654', 'Laki-Laki', 'reza', 'reza', 2, 101, 3, 10220000),
-(48, 'RINI', 'Kuningan', '089066787654', 'Laki-Laki', 'rini', 'rini', 3, 147, 4, 271000),
-(49, 'RIZKI', 'Kuningan', '089066787654', 'Laki-Laki', 'rizki', 'rizki', 1, 84, 4, 1000000),
-(50, 'ROBI', 'Kuningan', '089066787654', 'Laki-Laki', 'robi', 'robi', 3, 95, 4, 507000),
-(51, 'SITI KHODIJAH', 'Kuningan', '089066787654', 'Perempuan', 'siti_khodijah', 'siti_khodijah', 3, 109, 5, 301000),
-(52, 'TATA', 'Kuningan', '089066787654', 'Perempuan', 'tata', 'tata', 1, 88, 6, 1035000),
-(53, 'TIA', 'Kuningan', '089066787654', 'Perempuan', 'tia', 'tia', 2, 101, 5, 8216000),
-(54, 'ZAHIDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'zahidin', 'zahidin', 3, 133, 4, 233000);
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `alamat`, `no_hp`, `jk`, `username`, `password`, `level_member`, `recency`, `frequency`, `monetary`, `otp`) VALUES
+(1, 'A ABIL', 'Kuningan', '089066787654', 'Laki-Laki', 'abil', 'a_abil', 1, 43, 6, 4747000, '343554'),
+(2, 'A DENDI', 'Kuningan', '089066787654', 'Laki-Laki', 'dendi', 'a_dendi', 2, 138, 9, 10738000, '495991'),
+(3, 'A HENDRA', 'Kuningan', '089066787654', 'Laki-Laki', 'hendra', 'a_hendra', 3, 0, 4, 6577300, '495991'),
+(4, 'A YANTO', 'Kuningan', '089066787654', 'Laki-Laki', 'yanto', 'a_yanto', 4, 142, 5, 3907000, '495991'),
+(5, 'ACE', 'Kuningan', '089066787654', 'Laki-Laki', 'ace', 'ace', 3, 134, 7, 7309000, '495991'),
+(6, 'AGUS', 'Kuningan', '6285731639595', 'Laki-Laki', 'agus', '12345', 4, 141, 3, 596000, '774299'),
+(7, 'ANDRI', 'Kuningan', '089066787654', 'Laki-Laki', 'andri', 'andri', 4, 177, 5, 416000, '495991'),
+(8, 'ARIF', 'Kuningan', '089066787654', 'Laki-Laki', 'arif', 'arif', 4, 148, 8, 1129000, '495991'),
+(9, 'ASEP', 'Kuningan', '089066787654', 'Laki-Laki', 'asep', '123456', 3, 178, 3, 8127000, '943228'),
+(10, 'BAHRIAN', 'Kuningan', '089066787654', 'Laki-Laki', 'bahrian', 'bahrian', 4, 189, 4, 654000, '495991'),
+(11, 'BAI SABARUDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'sabarudin', 'bai_sabarudin', 4, 178, 3, 264000, '495991'),
+(12, 'BAPAK ALI', 'Kuningan', '089066787654', 'Laki-Laki', 'ali', 'bapak_ali', 4, 141, 10, 1309000, '495991'),
+(13, 'BP ARIFIN', 'Kuningan', '089066787654', 'Laki-Laki', 'arifin', 'bp_arifin', 4, 142, 1, 6000, '495991'),
+(14, 'BP ENDA', 'Kuningan', '089066787654', 'Laki-Laki', 'enda', 'bp_enda', 4, 166, 4, 427000, '495991'),
+(15, 'BU ELI', 'Kuningan', '089066787654', 'Perempuan', 'eli', 'bu_eli', 4, 139, 6, 1307000, '495991'),
+(16, 'BU IMAS', 'Kuningan', '089066787654', 'Perempuan', 'imas', 'bu_imas', 2, 176, 2, 10064000, '495991'),
+(17, 'BU MANTRI ITIT', 'Kuningan', '089066787654', 'Perempuan', 'itit', 'bu_mantri_itit', 4, 144, 3, 216000, '495991'),
+(18, 'CHELSEA', 'Kuningan', '089066787654', 'Perempuan', 'chelsea', 'chelsea', 4, 173, 4, 446000, '495991'),
+(19, 'CINTA', 'Kuningan', '089066787654', 'Perempuan', 'cinta', 'cinta', 4, 175, 3, 280000, '495991'),
+(20, 'DANI', 'Kuningan', '089066787654', 'Perempuan', 'dani', 'dani', 4, 133, 7, 636000, '495991'),
+(21, 'DINDA', 'Kuningan', '089066787654', 'Perempuan', 'dinda', 'dinda', 4, 138, 5, 514000, '495991'),
+(22, 'EFRIAN', 'Kuningan', '089066787654', 'Laki-Laki', 'efrian', 'efrian', 2, 177, 6, 17486000, '495991'),
+(23, 'EGA', 'Kuningan', '089066787654', 'Laki-Laki', 'ega', 'ega', 4, 189, 4, 526000, '495991'),
+(24, 'ERIS', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'eris', 4, 141, 4, 570000, '495991'),
+(25, 'FARHAN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'farhan', 4, 137, 3, 1038000, '495991'),
+(26, 'HERU', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'heru', 4, 147, 5, 1142000, '495991'),
+(27, 'IBU FRAHMI', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'ibu_frahmi', 4, 150, 3, 578000, '495991'),
+(28, 'IBU IIS', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'ibu_iis', 4, 166, 3, 63000, '495991'),
+(29, 'IBU SUCIHARTI', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'ibu_suciharti', 4, 174, 7, 508000, '495991'),
+(30, 'KANG UDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'kang_udin', 4, 132, 4, 684000, '495991'),
+(31, 'KHARISMA ', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'kharisma_', 2, 138, 7, 10836000, '495991'),
+(32, 'M REZA', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'm_reza', 4, 137, 5, 548000, '495991'),
+(33, 'MAE INDRIYANI', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'mae_indriyani', 4, 139, 5, 1163000, '495991'),
+(34, 'MAMAH AYU', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'mamah_ayu', 2, 148, 5, 10445000, '495991'),
+(35, 'NIKA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'nika', 4, 152, 5, 662000, '495991'),
+(36, 'OMAR SONJAYA', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'omar_sonjaya', 4, 202, 2, 1860000, '495991'),
+(37, 'P IPIN', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'p_ipin', 4, 143, 2, 401000, '495991'),
+(38, 'PAK ANDRI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_andri', 3, 140, 8, 7793000, '495991'),
+(39, 'PAK APANG', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_apang', 1, 168, 3, 5142000, '495991'),
+(40, 'PAK ASEP', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_asep', 4, 170, 4, 314000, '495991'),
+(41, 'PAK BIHI EDI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_bihi_edi', 4, 151, 3, 795000, '495991'),
+(42, 'PAK DANI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_dani', 4, 169, 2, 177000, '495991'),
+(43, 'PAK HAJI IIP', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_haji_iip', 1, 136, 3, 5118000, '495991'),
+(44, 'PAK IMAM', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_imam', 4, 134, 5, 485000, '495991'),
+(45, 'PAK KARMAD', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'pak_karmad', 4, 156, 4, 331000, '495991'),
+(46, 'RAI ALVIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'rai_alvin', 4, 136, 6, 405000, '495991'),
+(47, 'REZA', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'reza', 2, 146, 3, 10220000, '495991'),
+(48, 'RINI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'rini', 4, 192, 4, 271000, '495991'),
+(49, 'RIZKI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'rizki', 4, 129, 4, 1000000, '495991'),
+(50, 'ROBI', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'robi', 4, 140, 4, 507000, '495991'),
+(51, 'SITI KHODIJAH', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'siti_khodijah', 4, 154, 5, 301000, '495991'),
+(52, 'TATA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tata', 4, 133, 6, 1035000, '495991'),
+(53, 'TIA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tia', 3, 146, 5, 8216000, '495991'),
+(54, 'ZAHIDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'zahidin', 4, 178, 4, 233000, '495991');
 
 -- --------------------------------------------------------
 
@@ -704,7 +709,11 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `tgl_transaksi`, `total
 (238, 52, '2025-09-24', 48000, 0, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4),
 (239, 20, '2025-09-24', 60000, 0, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4),
 (240, 30, '2025-09-25', 258000, 0, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4),
-(241, 49, '2025-09-28', 12000, 0, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4);
+(241, 49, '2025-09-28', 12000, 0, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4),
+(242, 1, '2025-12-23', 3759000, 7000, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneCTC', 1, 4),
+(243, 3, '2026-02-04', 111000, 87000, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneREG', 0, 0),
+(244, 3, '2026-02-04', 111000, 87000, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneREG', 0, 0),
+(245, 3, '2026-02-04', 6243300, 87000, 'Kota KUNINGAN Prov. JAWA BARATExpedisi. jneREG', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -748,7 +757,7 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=246;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -772,7 +781,7 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=246;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

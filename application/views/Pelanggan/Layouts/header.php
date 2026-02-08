@@ -43,8 +43,8 @@
 								<?php
 								$dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='" . $this->session->userdata('id_pelanggan') . "'")->row();
 								?>
-								<p>Selamat Datang <strong><?= $dt_pelanggan->nama_pelanggan ?></strong> </p>
-								<p><strong>Level Member
+								<p>Selamat Datang <strong><?= $dt_pelanggan->nama_pelanggan ?></strong>
+									<strong>Level Member
 										<?php
 										if ($dt_pelanggan->level_member == '1') {
 											echo 'Bronze';
@@ -56,7 +56,8 @@
 											echo 'Platinum';
 										}
 										?>
-									</strong></p>
+									</strong>
+								</p>
 							<?php
 							}
 							?>
@@ -89,7 +90,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-3">
 					<div class="header__logo">
-						<a href="./index.html"><img src="img/logo.png" alt=""></a>
+						<img style="width: 200px;" src="<?= base_url('asset/logo.png') ?>" alt="">
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">

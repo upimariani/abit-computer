@@ -17,7 +17,7 @@
 						</a>
 					</li>
 					<?php
-					if ($this->session->userdata('id') == '1') {
+					if ($this->session->userdata('id') == '1' || $this->session->userdata('id') == '2') {
 					?>
 						<li class="relative px-6 py-3">
 							<a href="<?= base_url('Admin/cKategori') ?>" class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">

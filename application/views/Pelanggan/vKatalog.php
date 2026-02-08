@@ -1,8 +1,8 @@
 <!-- Hero Section Begin -->
 <section class="hero">
 	<div class="hero__slider owl-carousel">
-		<img style="width: auto;" src="<?= base_url('asset/malefashion-master/') ?>img/hero/logo-abit.png">
-		<img style="width: auto;" src="<?= base_url('asset/malefashion-master/') ?>img/hero/logo-abit.png">
+		<img style="width: auto;" src="<?= base_url('asset/') ?>h1.png">
+		<img style="width: auto;" src="<?= base_url('asset/') ?>h2.png">
 	</div>
 </section>
 <!-- Hero Section End -->

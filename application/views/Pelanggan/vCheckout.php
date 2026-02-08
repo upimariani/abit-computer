@@ -106,7 +106,14 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 							<ul class="checkout__total__all">
 								<li>Subtotal <span>Rp. <?= number_format($this->cart->total()) ?></span></li>
 								<li>Ongkir <span id="ongkir"></span></li>
-								<!-- <li>Diskon (-) <span id="diskon"></span></li> -->
+
+								<li>Promo (%) <span id="promo"><?php if ($dt_pelanggan->level_member == '2') {
+																	echo '5';
+																} else if ($dt_pelanggan->level_member == '3') {
+																	echo '10';
+																} else {
+																	echo '0';
+																} ?>%</span></li>
 								<li>Total <span class="ttl_bayar"></span></li>
 							</ul>
 							<button type="submit" class="site-btn">PESAN</button>
@@ -211,8 +218,14 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 
 			//menghitung total bayar
 			var ongkir = $("option:selected", this).attr('ongkir');
+
+			var promo = document.getElementById('promo').innerText;
+
+
 			var total_bayar = parseInt(ongkir) + parseInt(<?= $this->cart->total() ?>);
-			var reverse2 = total_bayar.toString().split('').reverse().join(''),
+			var st_promo = total_bayar - (parseInt(promo) / 100) * total_bayar;
+
+			var reverse2 = st_promo.toString().split('').reverse().join(''),
 				ribuan_total = reverse2.match(/\d{1,3}/g);
 			ribuan_total = ribuan_total.join(',').split('').reverse().join('');
 			$(".ttl_bayar").html("Rp. " + ribuan_total);
@@ -223,7 +236,7 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 			var estimasi = $("option:selected", this).attr('estimasi');
 			$("input[name=estimasi]").val(estimasi);
 			$("input[name=ongkir]").val(dataongkir);
-			$("input[name=total_pembayaran]").val(total_bayar);
+			$("input[name=total_pembayaran]").val(st_promo);
 
 		});
 

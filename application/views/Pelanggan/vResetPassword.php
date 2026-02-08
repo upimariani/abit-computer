@@ -17,7 +17,7 @@
 	<!-- Style -->
 	<link rel="stylesheet" href="<?= base_url('asset/login-form-08/') ?>css/style.css">
 
-	<title>LOGIN - Abit Computer</title>
+	<title>Reset Password - Abit Computer</title>
 </head>
 
 <body>
@@ -34,8 +34,8 @@
 					<div class="row justify-content-center">
 						<div class="col-md-8">
 							<div class="mb-4">
-								<h3>Sign In to <strong>Abit Computer</strong></h3>
-								<p class="mb-4">Silahkan melakukan login untuk melakukan transaksi.</p>
+								<h3>Reset Password <strong>Abit Computer</strong></h3>
+								<p class="mb-4">Silahkan masukan password baru.</p>
 							</div>
 							<?php
 							if ($this->session->userdata('success')) {
@@ -55,21 +55,21 @@
 							?>
 
 
-							<form action="<?= base_url('Pelanggan/cLogin') ?>" method="post">
+							<form action="<?= base_url('Pelanggan/cLogin/reset') ?>" method="post">
 								<div class="form-group first">
-									<label for="username">Username</label>
-									<input type="text" name="username" class="form-control" id="username">
-									<?= form_error('username', '<small class="text-danger">', '</small>') ?>
-								</div>
-								<div class="form-group last mb-4">
-									<label for="password">Password</label>
-									<input type="password" name="password" class="form-control" id="password">
+									<label for="password">New Password</label>
+									<input type="text" name="password" class="form-control" id="password">
 									<?= form_error('password', '<small class="text-danger">', '</small>') ?>
 								</div>
+								<div class="form-group last mb-4">
+									<label for="konfpassword">Konfirm Password</label>
+									<input type="number" name="konfpassword" class="form-control" id="konfpassword">
+									<?= form_error('konfpassword', '<small class="text-danger">', '</small>') ?>
+								</div>
 
 
-								<input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
-								<a href="<?= base_url('Pelanggan/cLogin/lupapassword') ?>"><span class="d-block text-left my-4 text-muted"> forget password</span></a>
+								<input type="submit" value="Reset Password" class="btn text-white btn-block btn-primary">
+								<a href="<?= base_url('Pelanggan/cLogin') ?>"><span class="d-block text-left my-4 text-muted"> back to lgoin</span></a>
 								<a href="<?= base_url('Pelanggan/cLogin/registrasi') ?>"><span class="d-block text-right my-4 text-muted"> or registered here!</span></a>
 
 							</form>
