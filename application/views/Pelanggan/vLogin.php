@@ -1,92 +1,72 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="<?= base_url('asset/login-form-08/') ?>fonts/icomoon/style.css">
-
-	<link rel="stylesheet" href="<?= base_url('asset/login-form-08/') ?>css/owl.carousel.min.css">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="<?= base_url('asset/login-form-08/') ?>css/bootstrap.min.css">
-
-	<!-- Style -->
-	<link rel="stylesheet" href="<?= base_url('asset/login-form-08/') ?>css/style.css">
-
-	<title>LOGIN - Abit Computer</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login - Abit Komputer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="<?= base_url('asset/windmill-dashboard/public/') ?>assets/css/tailwind.output.css" />
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="<?= base_url('asset/windmill-dashboard/public/') ?>assets/js/init-alpine.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-
-
-
-	<div class="content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 order-md-2">
-					<img src="<?= base_url('asset/login-form-08/') ?>images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+	<div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+		<div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+			<div class="flex flex-col overflow-y-auto md:flex-row">
+				<div class="h-32 md:h-auto md:w-1/2">
+					<img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="<?= base_url('asset/ab.jpg') ?>" alt="Office" />
+					<img aria-hidden="true" class="hidden object-cover w-full h-full dark:block" src="<?= base_url('asset/ab.jpg') ?>" alt="Office" />
 				</div>
-				<div class="col-md-6 contents">
-					<div class="row justify-content-center">
-						<div class="col-md-8">
-							<div class="mb-4">
-								<h3>Sign In to <strong>Abit Computer</strong></h3>
-								<p class="mb-4">Silahkan melakukan login untuk melakukan transaksi.</p>
+
+				<div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+					<div class="w-full">
+						<h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+							Login
+						</h1>
+						<?php if ($this->session->userdata('success')) : ?>
+							<div class="mb-4 px-4 py-3 rounded-lg bg-green-100 border border-green-400 text-green-700">
+								<?= $this->session->userdata('success') ?>
 							</div>
-							<?php
-							if ($this->session->userdata('success')) {
-							?>
-								<div class="alert alert-success" role="alert">
-									<?= $this->session->userdata('success') ?>
-								</div>
-							<?php
-							}
-							if ($this->session->userdata('error')) {
-							?>
-								<div class="alert alert-danger" role="alert">
-									<?= $this->session->userdata('error') ?>
-								</div>
-							<?php
-							}
-							?>
+						<?php endif; ?>
 
+						<?php if ($this->session->userdata('error')) : ?>
+							<div class="mb-4 px-4 py-3 rounded-lg bg-red-100 border border-red-400 text-red-700">
+								<?= $this->session->userdata('error') ?>
+							</div>
+						<?php endif; ?>
+						<form action="<?= base_url('Pelanggan/cLogin') ?>" method="post">
+							<label class="block text-sm">
+								<span class="text-gray-700 dark:text-gray-400">Username</span>
+								<input name="username" type="text" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Jane Doe" />
+								<?= form_error('username', '<small class="text-red-500 text-sm">', '</small>') ?>
+							</label>
+							<label class="block mt-4 text-sm">
+								<span class="text-gray-700 dark:text-gray-400">Password</span>
+								<input name="password" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="***************" type="password" />
+								<?= form_error('password', '<small class="text-red-500 text-sm">', '</small>') ?>
+							</label>
 
-							<form action="<?= base_url('Pelanggan/cLogin') ?>" method="post">
-								<div class="form-group first">
-									<label for="username">Username</label>
-									<input type="text" name="username" class="form-control" id="username">
-									<?= form_error('username', '<small class="text-danger">', '</small>') ?>
-								</div>
-								<div class="form-group last mb-4">
-									<label for="password">Password</label>
-									<input type="password" name="password" class="form-control" id="password">
-									<?= form_error('password', '<small class="text-danger">', '</small>') ?>
-								</div>
+							<!-- You should use a button here, as the anchor is only used for the example  -->
+							<button type="submit" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" href="../index.html">
+								Log in
+							</button>
+						</form>
+						<hr class="my-8" />
+						<p class="mt-1">
 
+							<a href="<?= base_url('Pelanggan/cLogin/lupapassword') ?>"><span class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"> forget password</span></a><br>
+							<a href="<?= base_url('Pelanggan/cLogin/registrasi') ?>"><span class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"> or registered here!</span></a>
 
-								<input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
-								<a href="<?= base_url('Pelanggan/cLogin/lupapassword') ?>"><span class="d-block text-left my-4 text-muted"> forget password</span></a>
-								<a href="<?= base_url('Pelanggan/cLogin/registrasi') ?>"><span class="d-block text-right my-4 text-muted"> or registered here!</span></a>
-
-							</form>
-						</div>
+						</p>
 					</div>
-
 				</div>
 
 			</div>
 		</div>
 	</div>
-
-
-	<script src="<?= base_url('asset/login-form-08/') ?>js/jquery-3.3.1.min.js"></script>
-	<script src="<?= base_url('asset/login-form-08/') ?>js/popper.min.js"></script>
-	<script src="<?= base_url('asset/login-form-08/') ?>js/bootstrap.min.js"></script>
-	<script src="<?= base_url('asset/login-form-08/') ?>js/main.js"></script>
 </body>
 
 </html>

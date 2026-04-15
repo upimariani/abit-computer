@@ -6,9 +6,34 @@
 <!-- <script src="https://cdn.tailwindcss.com/"></script> -->
 <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.0.5/js/dataTables.tailwindcss.js"></script>
-<!-- <script src="https://cdn.tailwindcss.com/"></script> -->
+<script src="https://cdn.tailwindcss.com/"></script>
+<script src="https://unpkg.com/alpinejs" defer></script>
 <script>
 	new DataTable('#myTable');
+</script>
+
+
+<script>
+	function previewGambar(event) {
+		let preview = document.getElementById('preview');
+		preview.innerHTML = "";
+
+		let files = event.target.files;
+
+		for (let i = 0; i < files.length; i++) {
+			let reader = new FileReader();
+
+			reader.onload = function(e) {
+				let img = document.createElement("img");
+				img.src = e.target.result;
+				img.style.width = "100px";
+				img.style.margin = "5px";
+				preview.appendChild(img);
+			}
+
+			reader.readAsDataURL(files[i]);
+		}
+	}
 </script>
 <script>
 	<?php
@@ -50,11 +75,11 @@
 	<?php
 	$pelanggan = $this->db->query("SELECT COUNT(id_pelanggan) as jml, level_member FROM `pelanggan` GROUP BY level_member")->result();
 	foreach ($pelanggan as $key => $value) {
-		if ($value->level_member == '1') {
+		if ($value->level_member == '4') {
 			$lev = 'Bronze';
-		} else if ($value->level_member == '2') {
-			$lev = 'Silver';
 		} else if ($value->level_member == '3') {
+			$lev = 'Silver';
+		} else if ($value->level_member == '2') {
 			$lev = 'Gold';
 		} else {
 			$lev = 'Platinum';

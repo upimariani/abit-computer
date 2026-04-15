@@ -8,7 +8,8 @@ class Ongkir extends CI_Controller
 
 	// private $api_key = '3f018925eeb63642fc6a25c862a54db5';
 	// private $api_key = '7jLX9MbP213ff18674eab1e29WSBIimb';
-	private $api_key = '6bad9044fb6fdb33caac381cb5b5bc5c';
+	// private $api_key = '6bad9044fb6fdb33caac381cb5b5bc5c';
+	private $api_key = '968af9512a7eb9257c239daaeeb6f725';
 	public function provinsi()
 	{
 
@@ -183,7 +184,7 @@ class Ongkir extends CI_Controller
 	}
 	public function paket()
 	{
-		$id_kota_asal = 211;
+		$id_kota_asal = 1224;
 		$expedisi = $this->input->post('expedisi');
 		$id_kecamatan = $this->input->post('id_kecamatan');
 		// $id_desa = $this->input->post('id_desa');

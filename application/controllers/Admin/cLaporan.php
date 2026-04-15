@@ -49,11 +49,11 @@ class cLaporan extends CI_Controller
 		$data = $this->db->query("SELECT * FROM `transaksi` JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan WHERE stat_transaksi='4' AND MONTH(tgl_transaksi)='" . $bulan . "' AND YEAR(tgl_transaksi)='" . $tahun . "'")->result();
 		$total = 0;
 		foreach ($data as $key => $value) {
-			if ($value->level_member == '1') {
+			if ($value->level_member == '4') {
 				$lev = 'Bronze';
-			} else if ($value->level_member == '2') {
-				$lev = 'Silver';
 			} else if ($value->level_member == '3') {
+				$lev = 'Silver';
+			} else if ($value->level_member == '2') {
 				$lev = 'Gold';
 			} else {
 				$lev = 'Platinum';

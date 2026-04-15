@@ -14,21 +14,20 @@ class cAnalisis extends CI_Controller
 	{
 
 		$data = $this->mAnalisis->getData();
-		$k = 4; // jumlah cluster
-		$centroids = $this->mAnalisis->randomCentroid($k);
-
+		$k = 4;
 		$maxIterasi = 100;
-		$hasilCluster = [];
 		$iterasi = 0;
 
+		$centroids = $this->mAnalisis->randomCentroid($k);
+
 		do {
-			$oldCentroid = $centroids;
-			$clusters = [];
+			$clusters = array_fill(0, $k, []);
+			$oldCentroids = $centroids;
 
-			// 1️⃣ Hitung jarak Euclidean setiap data ke setiap centroid
+			// 1️⃣ Hitung jarak & tentukan cluster
 			foreach ($data as $row) {
-
 				$distances = [];
+
 				foreach ($centroids as $i => $centroid) {
 					$distances[$i] = sqrt(
 						pow($row->recency - $centroid->recency, 2) +
@@ -38,41 +37,48 @@ class cAnalisis extends CI_Controller
 				}
 
 				$clusterIndex = array_keys($distances, min($distances))[0];
-				$hasilCluster[$row->id_pelanggan] = $clusterIndex;
 				$clusters[$clusterIndex][] = $row;
 			}
 
-			// 2️⃣ Update centroid baru
+			// 2️⃣ Update centroid
 			foreach ($clusters as $i => $cluster) {
-				$jumlah = count($cluster);
-				if ($jumlah > 0) {
-					$sumRecency = 0;
-					$sumFrequency = 0;
-					$sumMonetary = 0;
+				if (count($cluster) > 0) {
+					$sumR = $sumF = $sumM = 0;
 
 					foreach ($cluster as $item) {
-						$sumRecency += $item->recency;
-						$sumFrequency += $item->frequency;
-						$sumMonetary += $item->monetary;
+						$sumR += $item->recency;
+						$sumF += $item->frequency;
+						$sumM += $item->monetary;
 					}
 
-					$centroids[$i]->recency = $sumRecency / $jumlah;
-					$centroids[$i]->frequency = $sumFrequency / $jumlah;
-					$centroids[$i]->monetary = $sumMonetary / $jumlah;
+					$centroids[$i]->recency   = $sumR / count($cluster);
+					$centroids[$i]->frequency = $sumF / count($cluster);
+					$centroids[$i]->monetary  = $sumM / count($cluster);
 				}
 			}
 
 			$iterasi++;
-		} while ($centroids != $oldCentroid && $iterasi < $maxIterasi);
 
-		$dataView['clusters'] = $clusters;
-		$dataView['centroids'] = $centroids;
-		$dataView['iterasi'] = $iterasi;
+			// 3️⃣ Cek konvergensi
+			$berubah = false;
+			for ($i = 0; $i < $k; $i++) {
+				if (
+					abs($centroids[$i]->recency - $oldCentroids[$i]->recency) > 0.0001 ||
+					abs($centroids[$i]->frequency - $oldCentroids[$i]->frequency) > 0.0001 ||
+					abs($centroids[$i]->monetary - $oldCentroids[$i]->monetary) > 0.0001
+				) {
+					$berubah = true;
+					break;
+				}
+			}
+		} while ($berubah && $iterasi < $maxIterasi);
 
-		foreach ($clusters as $i => $cluster) {
+		foreach ($clusters as $a => $cluster) {
 			foreach ($cluster as $key => $row) {
+
+				// echo $a + 1;
 				$data = array(
-					'level_member' => $i + 1
+					'level_member' => $a + 1
 				);
 				$this->db->where('id_pelanggan', $row->id_pelanggan);
 				$this->db->update('pelanggan', $data);

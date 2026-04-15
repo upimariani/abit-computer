@@ -110,11 +110,11 @@
 								</td>
 								<td class="px-4 py-3 text-xs">
 									<?php
-									if ($value->level_member == '1') {
+									if ($value->level_member == '4') {
 										echo '<span class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:bg-red-700 dark:text-red-100">Bronze</span>';
-									} else if ($value->level_member == '2') {
-										echo '<span class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-blue-100">Silver</span>';
 									} else if ($value->level_member == '3') {
+										echo '<span class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-blue-100">Silver</span>';
+									} else if ($value->level_member == '2') {
 										echo '<span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">Gold</span>';
 									} else {
 										echo '<span class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full dark:bg-orange-700 dark:text-orange-100">Platinum</span>';

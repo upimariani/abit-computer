@@ -107,9 +107,11 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 								<li>Subtotal <span>Rp. <?= number_format($this->cart->total()) ?></span></li>
 								<li>Ongkir <span id="ongkir"></span></li>
 
-								<li>Promo (%) <span id="promo"><?php if ($dt_pelanggan->level_member == '2') {
+								<li>Promo (%) <span id="promo"><?php if ($dt_pelanggan->level_member == '3') {
 																	echo '5';
-																} else if ($dt_pelanggan->level_member == '3') {
+																} else if ($dt_pelanggan->level_member == '2') {
+																	echo '7';
+																} else if ($dt_pelanggan->level_member == '1') {
 																	echo '10';
 																} else {
 																	echo '0';
@@ -168,7 +170,7 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 				url: "http://localhost/abit-komputer/Pelanggan/ongkir/kecamatan",
 				data: 'id_kota=' + id_kota_terpilih,
 				success: function(hasil_kecamatan) {
-					// console.log(hasil_kecamatan);
+					console.log(hasil_kecamatan);
 					$("select[name=kecamatan]").html(hasil_kecamatan);
 				}
 			});
@@ -180,6 +182,7 @@ $dt_pelanggan = $this->db->query("SELECT * FROM `pelanggan` WHERE id_pelanggan='
 				url: "http://localhost/abit-komputer/Pelanggan/ongkir/expedisi",
 				success: function(hasil_expedisi) {
 					$("select[name=expedisi]").html(hasil_expedisi);
+
 				}
 			});
 		});

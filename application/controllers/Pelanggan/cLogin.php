@@ -55,7 +55,7 @@ class cLogin extends CI_Controller
 				'jk' => $this->input->post('jk'),
 				'username' => $this->input->post('username'),
 				'password' => $this->input->post('password'),
-				'level_member' => '3'
+				'level_member' => '1'
 			);
 			$this->db->insert('pelanggan', $data);
 			$this->session->set_flashdata('success', 'Anda Berhasil Melakukan Registrasi, Silahkan Login!');

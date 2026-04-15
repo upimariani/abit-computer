@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2026 at 10:45 AM
+-- Generation Time: Feb 11, 2026 at 10:12 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -445,7 +445,8 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `alamat`, `no_hp`, `j
 (51, 'SITI KHODIJAH', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'siti_khodijah', 4, 154, 5, 301000, '495991'),
 (52, 'TATA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tata', 4, 133, 6, 1035000, '495991'),
 (53, 'TIA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tia', 3, 146, 5, 8216000, '495991'),
-(54, 'ZAHIDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'zahidin', 4, 178, 4, 233000, '495991');
+(54, 'ZAHIDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'zahidin', 4, 178, 4, 233000, '495991'),
+(55, 'Coba', 'Kuningan', '089987654543', 'Perempuan', 'coba', 'coba', 4, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -775,7 +776,7 @@ ALTER TABLE `komputer`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `transaksi`

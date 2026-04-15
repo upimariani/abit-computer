@@ -28,8 +28,8 @@
 
 	<!-- Header Section Begin -->
 	<header class="header">
-		<div class="header__top">
-			<div class="container">
+		<div class="header__top bg-info">
+			<div class="container ">
 				<div class="row">
 					<div class="col-lg-6 col-md-7">
 						<div class="header__top__left">
@@ -46,14 +46,14 @@
 								<p>Selamat Datang <strong><?= $dt_pelanggan->nama_pelanggan ?></strong>
 									<strong>Level Member
 										<?php
-										if ($dt_pelanggan->level_member == '1') {
-											echo 'Bronze';
-										} else if ($dt_pelanggan->level_member == '2') {
-											echo 'Silver';
+										if ($dt_pelanggan->level_member == '4') {
+											echo '<span class="badge bg-danger">Bronze</span>';
 										} else if ($dt_pelanggan->level_member == '3') {
-											echo 'Gold';
+											echo '<span class="badge bg-warning">Silver</span>';
+										} else if ($dt_pelanggan->level_member == '2') {
+											echo '<span class="badge bg-danger">Gold</span>';
 										} else {
-											echo 'Platinum';
+											echo '<span class="badge bg-success">Platinum</span>';
 										}
 										?>
 									</strong>
