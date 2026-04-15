@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
 	<script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-aA8f0UCipTotLFTy"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 
 	<!-- Css Styles -->
 	<link rel="stylesheet" href="<?= base_url('asset/malefashion-master/') ?>css/bootstrap.min.css" type="text/css">
@@ -24,4 +24,5 @@
 	<link rel="stylesheet" href="<?= base_url('asset/malefashion-master/') ?>css/owl.carousel.min.css" type="text/css">
 	<link rel="stylesheet" href="<?= base_url('asset/malefashion-master/') ?>css/slicknav.min.css" type="text/css">
 	<link rel="stylesheet" href="<?= base_url('asset/malefashion-master/') ?>css/style.css" type="text/css">
+
 </head>

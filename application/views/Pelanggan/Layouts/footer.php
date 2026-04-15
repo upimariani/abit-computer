@@ -42,6 +42,7 @@
 <!-- Search End -->
 
 <!-- Js Plugins -->
+
 <script src="<?= base_url('asset/malefashion-master/') ?>js/jquery-3.3.1.min.js"></script>
 <script src="<?= base_url('asset/malefashion-master/') ?>js/bootstrap.min.js"></script>
 <script src="<?= base_url('asset/malefashion-master/') ?>js/jquery.nice-select.min.js"></script>

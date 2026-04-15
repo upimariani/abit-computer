@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2026 at 10:12 AM
+-- Generation Time: Apr 15, 2026 at 04:47 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -326,45 +326,45 @@ CREATE TABLE `komputer` (
 --
 
 INSERT INTO `komputer` (`id_komputer`, `id_kategori`, `merk`, `deskripsi`, `keterangan`, `harga`, `foto`, `stok`) VALUES
-(1, 1, 'PRINTER EPSON L121 INK JET', 'deskripsi printer epson l121 ink jet', 'unit', 1800000, 'images1.png', 48),
-(2, 1, 'OLIKE QUICK CHANGER POWER ADAPTER C307 WHITE', 'deskripsi olike quick changer power adapter c307 white', 'unit', 50000, 'images1.png', 50),
-(3, 1, 'OLIKE WIRED EARPHONE E201 WHITE', 'deskripsi olike wired earphone e201 white', 'unit', 24000, 'images1.png', 49),
-(4, 1, 'LAPTOP ASUS VIVOBOOK GO 14 E1404GA I3 N305 8CORE BLK -FHD321', 'deskripsi laptop asus vivobook go 14 e1404ga i3 n305 8core blk -fhd321', 'unit', 6850000, 'images1.png', 49),
-(5, 1, 'OLIKE WIRELESS OPTICAL MOUSE M200 BLACK', 'deskripsi olike wireless optical mouse m200 black', 'unit', 49000, 'images1.png', 50),
-(6, 1, 'OLIKE WIRED EARPHONE E13 GREEN', 'deskripsi olike wired earphone e13 green', 'unit', 30000, 'images1.png', 50),
-(7, 1, 'MIKUSO GAMEPAD DOUBLE GP-USB008', 'deskripsi mikuso gamepad double gp-usb008', 'unit', 152000, 'images1.png', 49),
-(8, 1, 'MOUSE MIKUSO USB WIRED CONNECTION MOS-372U', 'deskripsi mouse mikuso usb wired connection mos-372u', 'unit', 38000, 'images1.png', 50),
-(9, 1, 'MIKUSO MOUSEPAD MP-118', 'deskripsi mikuso mousepad mp-118', 'unit', 11000, 'images1.png', 50),
-(10, 1, 'KEYBOARD PROTECTOR 14 INCH', 'deskripsi keyboard protector 14 inch', 'unit', 6000, 'images1.png', 50),
-(11, 1, 'MIKUSO 6-IN-1 CARD READER USB 2.0 CRD-010', 'deskripsi mikuso 6-in-1 card reader usb 2.0 crd-010', 'unit', 77000, 'images1.png', 50),
-(12, 1, 'MIKUSO USB PRINTER 2.0 CBL-011', 'deskripsi mikuso usb printer 2.0 cbl-011', 'unit', 27000, 'images1.png', 50),
-(13, 1, 'OLIKE DATA CABLE RDC011C WHITE TYPE C', 'deskripsi olike data cable rdc011c white type c', 'unit', 20000, 'images1.png', 50),
-(14, 1, 'PRINTER BROTHER T820DW ALL IN ONE', 'deskripsi printer brother t820dw all in one', 'unit', 5050000, 'images1.png', 50),
-(15, 1, 'OLIKE 16GB ALL METAL FLASHDISK OF216', 'deskripsi olike 16gb all metal flashdisk of216', 'unit', 60000, 'images1.png', 50),
-(16, 1, 'TEKNIX 3.5MM IN-EAR EARPHONE EP-101 WHITE', 'deskripsi teknix 3.5mm in-ear earphone ep-101 white', 'unit', 68000, 'images1.png', 50),
-(17, 1, 'MIKUSO WIRELESS MOUSE MOS-W085', 'deskripsi mikuso wireless mouse mos-w085', 'unit', 86000, 'images1.png', 50),
-(18, 1, 'OLIKE BLITZ WIRELESS PORTABLE AUDIO SV1', 'deskripsi olike blitz wireless portable audio sv1', 'unit', 299000, 'images1.png', 50),
-(19, 1, 'OLIKE BLITZ FAST CHARGING 20000MAH P6', 'deskripsi olike blitz fast charging 20000mah p6', 'unit', 375000, 'images1.png', 50),
-(20, 1, 'KEYBOARD LENOVO THINKPAD X200', 'deskripsi keyboard lenovo thinkpad x200', 'unit', 360000, 'images1.png', 50),
-(21, 1, 'OLIKE CAR PHONE HOLDER HC3', 'deskripsi olike car phone holder hc3', 'unit', 79000, 'images1.png', 50),
-(22, 1, 'MIKUSO NOTEBOOK COOLING PAD NCP-063', 'deskripsi mikuso notebook cooling pad ncp-063', 'unit', 108000, 'images1.png', 50),
-(23, 1, 'OLIKE WIRELESS PORTABLE RADIO OBS-600', 'deskripsi olike wireless portable radio obs-600', 'unit', 112000, 'images1.png', 50),
-(24, 1, 'OLIKE PROCHARGE WIRELESS GAMING MOUSE GM2', 'deskripsi olike procharge wireless gaming mouse gm2', 'unit', 165000, 'images1.png', 50),
-(25, 1, 'TEKNIX USB TO MICRO CBL-834-M PRO', 'deskripsi teknix usb to micro cbl-834-m pro', 'unit', 53000, 'images1.png', 50),
-(26, 1, 'TEKNIX USB TO TYPE-C CBL-829-C', 'deskripsi teknix usb to type-c cbl-829-c', 'unit', 35000, 'images1.png', 50),
-(27, 1, 'MIKUSO FLASHDISK MB-098 METAL', 'deskripsi mikuso flashdisk mb-098 metal', 'unit', 82000, 'images1.png', 50),
-(28, 1, 'OLIKE WIRELESS KEYBOARD AND MOUSE SET KMS1', 'deskripsi olike wireless keyboard and mouse set kms1', 'unit', 199000, 'images1.png', 50),
-(29, 1, 'LAPTOP HP 14-DQ5568TU I3 1215 SILVER', 'deskripsi laptop hp 14-dq5568tu i3 1215 silver', 'unit', 7600000, 'images1.png', 50),
-(30, 1, 'TEKNIX SPEAKER SUBWOOFER SPK-S080', 'deskripsi teknix speaker subwoofer spk-s080', 'unit', 166000, 'images1.png', 50),
-(31, 1, 'MIKUSO WIRELESS KEYBOARD+MOUSE MINI KB-C017', 'deskripsi mikuso wireless keyboard+mouse mini kb-c017', 'unit', 288000, 'images1.png', 50),
-(32, 1, 'MIKUSO 4K HDMI CABLE CBL-022', 'deskripsi mikuso 4k hdmi cable cbl-022', 'unit', 66000, 'images1.png', 50),
-(33, 1, 'TEKNIX USB TO TYPE-C CBL-834-C PRO', 'deskripsi teknix usb to type-c cbl-834-c pro', 'unit', 55000, 'images1.png', 50),
-(34, 1, 'LAPTOP ASUS VIVOBOOK E1404FA-FHD321 AMD RYZEN 3-7320U MIXED BLACK', 'deskripsi laptop asus vivobook e1404fa-fhd321 amd ryzen 3-7320u mixed black', 'unit', 6600000, 'images1.png', 50),
-(35, 1, 'LAPTOP ACER A514-56P-59SK 51335U', 'deskripsi laptop acer a514-56p-59sk 51335u', 'unit', 9950000, 'images1.png', 50),
-(36, 1, 'OLIKE MICRO SD TF64G 64 GB', 'deskripsi olike micro sd tf64g 64 gb', 'unit', 99000, 'images1.png', 50),
-(37, 1, 'OLIKE WIRELESS MINI HOME THEATER S3H', 'deskripsi olike wireless mini home theater s3h', 'unit', 229000, 'images1.png', 50),
-(38, 1, 'TEKNIX CHARGER KIT USB TO MICRO CHR-094-M', 'deskripsi teknix charger kit usb to micro chr-094-m', 'unit', 93000, 'images1.png', 50),
-(39, 1, 'LAPTOP LENOVO IDEAPAD 3-CVID 256 I3 1215U ARCTIC GREY', 'deskripsi laptop lenovo ideapad 3-cvid 256 i3 1215u arctic grey', 'unit', 6850000, 'images1.png', 50);
+(1, 1, 'PRINTER EPSON L121 INK JET', 'deskripsi printer epson l121 ink jet', 'unit', 1800000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 48),
+(2, 1, 'OLIKE QUICK CHANGER POWER ADAPTER C307 WHITE', 'deskripsi olike quick changer power adapter c307 white', 'unit', 50000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(3, 1, 'OLIKE WIRED EARPHONE E201 WHITE', 'deskripsi olike wired earphone e201 white', 'unit', 24000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 49),
+(4, 1, 'LAPTOP ASUS VIVOBOOK GO 14 E1404GA I3 N305 8CORE BLK -FHD321', 'deskripsi laptop asus vivobook go 14 e1404ga i3 n305 8core blk -fhd321', 'unit', 6850000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 49),
+(5, 1, 'OLIKE WIRELESS OPTICAL MOUSE M200 BLACK', 'deskripsi olike wireless optical mouse m200 black', 'unit', 49000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(6, 1, 'OLIKE WIRED EARPHONE E13 GREEN', 'deskripsi olike wired earphone e13 green', 'unit', 30000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(7, 1, 'MIKUSO GAMEPAD DOUBLE GP-USB008', 'deskripsi mikuso gamepad double gp-usb008', 'unit', 152000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 49),
+(8, 1, 'MOUSE MIKUSO USB WIRED CONNECTION MOS-372U', 'deskripsi mouse mikuso usb wired connection mos-372u', 'unit', 38000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(9, 1, 'MIKUSO MOUSEPAD MP-118', 'deskripsi mikuso mousepad mp-118', 'unit', 11000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(10, 1, 'KEYBOARD PROTECTOR 14 INCH', 'deskripsi keyboard protector 14 inch', 'unit', 6000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(11, 1, 'MIKUSO 6-IN-1 CARD READER USB 2.0 CRD-010', 'deskripsi mikuso 6-in-1 card reader usb 2.0 crd-010', 'unit', 77000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(12, 1, 'MIKUSO USB PRINTER 2.0 CBL-011', 'deskripsi mikuso usb printer 2.0 cbl-011', 'unit', 27000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(13, 1, 'OLIKE DATA CABLE RDC011C WHITE TYPE C', 'deskripsi olike data cable rdc011c white type c', 'unit', 20000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(14, 1, 'PRINTER BROTHER T820DW ALL IN ONE', 'deskripsi printer brother t820dw all in one', 'unit', 5050000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(15, 1, 'OLIKE 16GB ALL METAL FLASHDISK OF216', 'deskripsi olike 16gb all metal flashdisk of216', 'unit', 60000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(16, 1, 'TEKNIX 3.5MM IN-EAR EARPHONE EP-101 WHITE', 'deskripsi teknix 3.5mm in-ear earphone ep-101 white', 'unit', 68000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(17, 1, 'MIKUSO WIRELESS MOUSE MOS-W085', 'deskripsi mikuso wireless mouse mos-w085', 'unit', 86000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(18, 1, 'OLIKE BLITZ WIRELESS PORTABLE AUDIO SV1', 'deskripsi olike blitz wireless portable audio sv1', 'unit', 299000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(19, 1, 'OLIKE BLITZ FAST CHARGING 20000MAH P6', 'deskripsi olike blitz fast charging 20000mah p6', 'unit', 375000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(20, 1, 'KEYBOARD LENOVO THINKPAD X200', 'deskripsi keyboard lenovo thinkpad x200', 'unit', 360000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(21, 1, 'OLIKE CAR PHONE HOLDER HC3', 'deskripsi olike car phone holder hc3', 'unit', 79000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(22, 1, 'MIKUSO NOTEBOOK COOLING PAD NCP-063', 'deskripsi mikuso notebook cooling pad ncp-063', 'unit', 108000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(23, 1, 'OLIKE WIRELESS PORTABLE RADIO OBS-600', 'deskripsi olike wireless portable radio obs-600', 'unit', 112000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(24, 1, 'OLIKE PROCHARGE WIRELESS GAMING MOUSE GM2', 'deskripsi olike procharge wireless gaming mouse gm2', 'unit', 165000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(25, 1, 'TEKNIX USB TO MICRO CBL-834-M PRO', 'deskripsi teknix usb to micro cbl-834-m pro', 'unit', 53000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(26, 1, 'TEKNIX USB TO TYPE-C CBL-829-C', 'deskripsi teknix usb to type-c cbl-829-c', 'unit', 35000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(27, 1, 'MIKUSO FLASHDISK MB-098 METAL', 'deskripsi mikuso flashdisk mb-098 metal', 'unit', 82000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(28, 1, 'OLIKE WIRELESS KEYBOARD AND MOUSE SET KMS1', 'deskripsi olike wireless keyboard and mouse set kms1', 'unit', 199000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(29, 1, 'LAPTOP HP 14-DQ5568TU I3 1215 SILVER', 'deskripsi laptop hp 14-dq5568tu i3 1215 silver', 'unit', 7600000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(30, 1, 'TEKNIX SPEAKER SUBWOOFER SPK-S080', 'deskripsi teknix speaker subwoofer spk-s080', 'unit', 166000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(31, 1, 'MIKUSO WIRELESS KEYBOARD+MOUSE MINI KB-C017', 'deskripsi mikuso wireless keyboard+mouse mini kb-c017', 'unit', 288000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(32, 1, 'MIKUSO 4K HDMI CABLE CBL-022', 'deskripsi mikuso 4k hdmi cable cbl-022', 'unit', 66000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(33, 1, 'TEKNIX USB TO TYPE-C CBL-834-C PRO', 'deskripsi teknix usb to type-c cbl-834-c pro', 'unit', 55000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(34, 1, 'LAPTOP ASUS VIVOBOOK E1404FA-FHD321 AMD RYZEN 3-7320U MIXED BLACK', 'deskripsi laptop asus vivobook e1404fa-fhd321 amd ryzen 3-7320u mixed black', 'unit', 6600000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(35, 1, 'LAPTOP ACER A514-56P-59SK 51335U', 'deskripsi laptop acer a514-56p-59sk 51335u', 'unit', 9950000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(36, 1, 'OLIKE MICRO SD TF64G 64 GB', 'deskripsi olike micro sd tf64g 64 gb', 'unit', 99000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(37, 1, 'OLIKE WIRELESS MINI HOME THEATER S3H', 'deskripsi olike wireless mini home theater s3h', 'unit', 229000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(38, 1, 'TEKNIX CHARGER KIT USB TO MICRO CHR-094-M', 'deskripsi teknix charger kit usb to micro chr-094-m', 'unit', 93000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50),
+(39, 1, 'LAPTOP LENOVO IDEAPAD 3-CVID 256 I3 1215U ARCTIC GREY', 'deskripsi laptop lenovo ideapad 3-cvid 256 i3 1215u arctic grey', 'unit', 6850000, '47fadf6e625c07e78636495bf790baf6.png,5b5a107f317dd3f98dce1cc4a16bf251.png,5a9e1c34af52e9b77149294bb5f30b83.png', 50);
 
 -- --------------------------------------------------------
 
@@ -446,7 +446,8 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `alamat`, `no_hp`, `j
 (52, 'TATA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tata', 4, 133, 6, 1035000, '495991'),
 (53, 'TIA', 'Kuningan', '089066787654', 'Perempuan', 'agus', 'tia', 3, 146, 5, 8216000, '495991'),
 (54, 'ZAHIDIN', 'Kuningan', '089066787654', 'Laki-Laki', 'agus', 'zahidin', 4, 178, 4, 233000, '495991'),
-(55, 'Coba', 'Kuningan', '089987654543', 'Perempuan', 'coba', 'coba', 4, 0, 0, 0, '');
+(55, 'Coba', 'Kuningan', '089987654543', 'Perempuan', 'coba', 'coba', 4, 0, 0, 0, ''),
+(56, 'coba', 'asa', '089986732121', 'Perempuan', 'pemilik', 'pelangganA', 1, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -770,13 +771,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `komputer`
 --
 ALTER TABLE `komputer`
-  MODIFY `id_komputer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_komputer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `transaksi`

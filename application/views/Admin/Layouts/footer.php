@@ -6,35 +6,13 @@
 <!-- <script src="https://cdn.tailwindcss.com/"></script> -->
 <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.0.5/js/dataTables.tailwindcss.js"></script>
-<script src="https://cdn.tailwindcss.com/"></script>
-<script src="https://unpkg.com/alpinejs" defer></script>
+<!-- <script src="https://cdn.tailwindcss.com/"></script> -->
+<!-- <script src="https://unpkg.com/alpinejs" defer></script> -->
 <script>
 	new DataTable('#myTable');
 </script>
 
 
-<script>
-	function previewGambar(event) {
-		let preview = document.getElementById('preview');
-		preview.innerHTML = "";
-
-		let files = event.target.files;
-
-		for (let i = 0; i < files.length; i++) {
-			let reader = new FileReader();
-
-			reader.onload = function(e) {
-				let img = document.createElement("img");
-				img.src = e.target.result;
-				img.style.width = "100px";
-				img.style.margin = "5px";
-				preview.appendChild(img);
-			}
-
-			reader.readAsDataURL(files[i]);
-		}
-	}
-</script>
 <script>
 	<?php
 	$transaksi = $this->db->query("SELECT SUM(total_transaksi) as jml, tgl_transaksi FROM `transaksi` GROUP BY tgl_transaksi DESC limit 20")->result();

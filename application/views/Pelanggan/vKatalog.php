@@ -1,11 +1,13 @@
-<!-- Hero Section Begin -->
 <section class="hero">
 	<div class="hero__slider owl-carousel">
-		<img style="width: auto;" src="<?= base_url('asset/') ?>h1.png">
-		<img style="width: auto;" src="<?= base_url('asset/') ?>h2.png">
+		<div class="item">
+			<img src="<?= base_url('asset/') ?>h1.png" class="img-fluid">
+		</div>
+		<div class="item">
+			<img src="<?= base_url('asset/') ?>h2.png" class="img-fluid">
+		</div>
 	</div>
 </section>
-<!-- Hero Section End -->
 <!-- Product Section Begin -->
 <hr>
 <?php
@@ -47,10 +49,15 @@ if ($this->session->userdata('success') != '') {
 			foreach ($produk as $key => $value) {
 				$kategori = $value->nama_kategori;
 				$code = str_replace(" ", "-", $kategori);
+
+				$data = $value->foto;
+				$files = explode(',', $data);
+
+
 			?>
 				<div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix <?= $code ?>">
 					<div class="product__item">
-						<div class="product__item__pic set-bg" data-setbg="<?= base_url('asset/foto-produk/' . $value->foto) ?>">
+						<div class="product__item__pic set-bg" data-setbg="<?= base_url('asset/foto-produk/' . $files[0]) ?>">
 
 							<ul class="product__hover">
 								<li><a href="<?= base_url('Pelanggan/cKatalog/detail/' . $value->id_komputer) ?>"><img src="<?= base_url('asset/malefashion-master/') ?>img/icon/search.png" alt=""><span>Detail</span></a></li>

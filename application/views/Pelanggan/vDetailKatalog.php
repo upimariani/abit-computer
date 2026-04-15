@@ -12,26 +12,44 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-md-3">
+				<?php
+				$data = $detail->foto;
+				$files = explode(',', $data);
 
+				?>
+				<div class="col-lg-3 col-md-3">
+					<ul class="nav nav-tabs" role="tablist">
+						<?php
+
+						foreach ($files as $key => $file) {
+						?>
+							<li class="nav-item">
+								<a class="nav-link <?= $key == 0 ? 'show active' : '' ?>" data-toggle="tab" href="#tabs-<?= $key ?>" role="tab">
+									<div class="product__thumb__pic set-bg" data-setbg="<?= base_url('asset/foto-produk/' . $file)  ?>">
+									</div>
+								</a>
+							</li>
+						<?php
+						}
+
+						?>
+					</ul>
 				</div>
 				<div class="col-lg-6 col-md-9">
 					<div class="tab-content">
-						<div class="tab-pane active" id="tabs-1" role="tabpanel">
-							<div class="product__details__pic__item">
-								<img src="<?= base_url('asset/foto-produk/' . $detail->foto) ?>" alt="">
+						<?php
+
+						foreach ($files as $key => $file) {
+						?>
+							<div class="tab-pane <?= $key == 0 ? 'show active' : '' ?>" id="tabs-<?= $key ?>" role="tabpanel">
+								<div class="product__details__pic__item">
+									<img src="<?= base_url('asset/foto-produk/' . $file)  ?>" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="tab-pane" id="tabs-2" role="tabpanel">
-							<div class="product__details__pic__item">
-								<img src="<?= base_url('asset/foto-produk/' . $detail->foto) ?>" alt="">
-							</div>
-						</div>
-						<div class="tab-pane" id="tabs-3" role="tabpanel">
-							<div class="product__details__pic__item">
-								<img src="<?= base_url('asset/foto-produk/' . $detail->foto) ?>" alt="">
-							</div>
-						</div>
+						<?php
+						}
+
+						?>
 
 					</div>
 				</div>
